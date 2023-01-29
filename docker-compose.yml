@@ -15,8 +15,9 @@ services:
     image: devdanib/app-laravel-php
     working_dir: /var/www
     container_name: php-laravel
+    #tenho que criar o arquivo app/ senão a instalação do Laravel via composer do container não deixa....
     volumes:
-      - ./:/var/www/
+      - ./app:/var/www/
     restart: always
     networks:
       - docker-laravel
