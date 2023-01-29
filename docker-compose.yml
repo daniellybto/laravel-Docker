@@ -30,7 +30,7 @@ services:
     ports:
       - 80:80
     volumes:
-      - ./:/var/www
+      - ./app:/var/www
       - ./docker/nginx/:/etc/nginx/conf.d/
     networks:
       - docker-laravel
